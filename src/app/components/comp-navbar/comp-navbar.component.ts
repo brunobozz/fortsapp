@@ -9,7 +9,7 @@ import { FortnitetrackerService } from 'src/app/services/fortnitetracker/fortnit
 })
 export class CompNavbarComponent implements OnInit {
   public language = window.localStorage.getItem('language');
-  public langList = ['ar', 'de', 'en' , 'es', 'fr', 'it', 'ja', 'ko', 'pl', 'pt-BR', 'ru'];
+  public langList = ['ar', 'de', 'en' , 'es', 'fr', 'it', 'ja', 'ko', 'pl', 'pt-BR', 'ru', 'tr'];
 
   constructor(private fortnitetracker: FortnitetrackerService) {}
 

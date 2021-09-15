@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     if (!this.language) {
       window.localStorage.setItem('language', 'pt-BR');
+      window.location.reload();
     }
   }
 }
