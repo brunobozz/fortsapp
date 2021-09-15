@@ -1,0 +1,26 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .dropdown {
+    button {
+      img {
+        width: 26px;
+      }
+    }
+
+    &-menu {
+      padding: 5px;
+      min-width: 168px;
+      button {
+        img {
+          width: 26px;
+        }
+      }
+      div:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

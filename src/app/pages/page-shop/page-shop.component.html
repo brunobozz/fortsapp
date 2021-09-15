@@ -1,0 +1,33 @@
+<div class="container">
+  <app-comp-page-header pageName="Loja"></app-comp-page-header>
+
+  <div class="shop-daily mt-4">
+    <h2>Dayli</h2>
+    <div class="shop-itens">
+      <div *ngFor="let line of shopDaily">
+        <div *ngFor="let item of line.items" class="card m-2">
+          <img [src]="item.images.icon" class="card-img-top bg-primary" />
+          <div class="card-body">
+            <h4 class="card-title">{{ item.name }}</h4>
+            <p class="card-text">{{ line.regularPrice }} V-Bucks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-daily mt-4">
+    <h2>Featured</h2>
+    <div class="shop-itens">
+      <div *ngFor="let line of shopFeatured">
+        <div *ngFor="let item of line.items" class="card m-2">
+          <img [src]="item.images.icon" class="card-img-top bg-primary" />
+          <div class="card-body">
+            <h3 class="card-title">{{ item.name }}</h3>
+            <p class="card-text">{{ line.regularPrice }} V-Bucks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
