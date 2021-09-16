@@ -1,2 +1,16 @@
 @import "./custom-bootstrap-theme";
 @import "./node_modules/bootstrap/scss/bootstrap";
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  outline: 0px;
+}

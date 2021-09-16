@@ -79,4 +79,18 @@
       }
     }
   }
+
+  &-block::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &-block::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &-block::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    outline: 0px;
+  }
 }
