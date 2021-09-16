@@ -1,0 +1,27 @@
+<section class="shop mt-4">
+  <h1 class="display-6">{{ title }}</h1>
+  <div class="shop-block">
+    <div *ngFor="let line of shop" class="shop-block-itens">
+      <div class="shop-block-itens-radius">
+        <div class="shop-block-itens-info">
+          <img
+            class="shop-block-itens-info-img"
+            src="https://fortnite-api.com/images/vbuck.png"
+          />
+          <span class="shop-block-itens-info-text">
+            {{ line.regularPrice }}</span
+          >
+        </div>
+        <div
+          *ngFor="let item of line.items"
+          class="shop-block-itens-item"
+          [ngClass]="'bg-' + item.rarity.value"
+          style="background-image: url('{{ item.images.icon }}');"
+        >
+          <i class="fa fa-plus shop-block-itens-item-plus"></i>
+          <span class="shop-block-itens-item-text">{{ item.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

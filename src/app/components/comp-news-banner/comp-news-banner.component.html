@@ -1,9 +1,5 @@
 <section class="news-banner">
-  <div
-    id="carouselNews"
-    class="carousel slide"
-    data-bs-ride="carousel"
-  >
+  <div id="carouselNews" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div
         *ngFor="let news of newsBr"
@@ -12,28 +8,24 @@
       >
         <img [src]="news.image" class="d-block w-100" [alt]="news.body" />
         <div class="carousel-caption">
-          <h4>{{ news.title }}</h4>
-          <p class="d-none d-md-block">{{ news.body }}</p>
+          <h1>{{ news.title }}</h1>
+          <h4 class="d-none d-md-block">{{ news.body }}</h4>
         </div>
       </div>
     </div>
     <button
       class="carousel-control-prev"
-      type="button"
       data-bs-target="#carouselNews"
       data-bs-slide="prev"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
     </button>
     <button
       class="carousel-control-next"
-      type="button"
       data-bs-target="#carouselNews"
       data-bs-slide="next"
     >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
     </button>
   </div>
 </section>

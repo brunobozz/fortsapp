@@ -1,0 +1,29 @@
+.news-banner {
+  .carousel {
+    &-item {
+      background-position: center;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+    &-caption {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      text-align: left;
+      padding: 2rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      text-shadow: 3px 3px 3px rgba(0,0,0,1);
+    }
+  }
+}

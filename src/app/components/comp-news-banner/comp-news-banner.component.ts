@@ -9,7 +9,6 @@ import { FortnitetrackerService } from 'src/app/services/fortnitetracker/fortnit
 export class CompNewsBannerComponent implements OnInit {
   public newsBr: any = [];
   public newsCreative: any = [];
-  public newsStw: any = [];
 
   constructor(private fortnitetracker: FortnitetrackerService) {}
 
@@ -21,7 +20,6 @@ export class CompNewsBannerComponent implements OnInit {
     this.fortnitetracker.getDataV2('news/').subscribe((res: any) => {
       this.newsBr = res.data.br.motds;
       this.newsCreative = res.data.creative.motds;
-      this.newsStw = res.data.creative.stw;
     });
   }
 }

@@ -1,1 +1,14 @@
-<app-comp-news-banner></app-comp-news-banner>
+<div class="container">
+  <app-comp-news-banner></app-comp-news-banner>
+
+  <h1 class="display-4 mt-4">Shop</h1>
+
+  <app-comp-shop title="Daily" [shop]="shopDaily"></app-comp-shop>
+
+  <app-comp-shop title="Featured" [shop]="shopFeatured"></app-comp-shop>
+
+  <app-comp-shop
+    title="Special Featured"
+    [shop]="shopSpecialFeatured"
+  ></app-comp-shop>
+</div>
