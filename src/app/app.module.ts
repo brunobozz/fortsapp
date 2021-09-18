@@ -12,6 +12,7 @@ import { CompNewsBannerComponent } from './components/comp-news-banner/comp-news
 import { CompMapComponent } from './components/comp-map/comp-map.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { CompShopComponent } from './components/comp-shop/comp-shop.component';
+import { CompFooterComponent } from './components/comp-footer/comp-footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CompShopComponent } from './components/comp-shop/comp-shop.component';
     CompMapComponent,
     PageHomeComponent,
     CompShopComponent,
+    CompFooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
