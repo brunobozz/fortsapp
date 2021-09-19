@@ -17,7 +17,7 @@ export class CompNewsBannerComponent implements OnInit {
   }
 
   private getNews() {
-    this.fortnitetracker.getDataV2('news/').subscribe((res: any) => {
+    this.fortnitetracker.getDataLang('v2/', 'news/').subscribe((res: any) => {
       this.newsBr = res.data.br.motds;
       this.newsCreative = res.data.creative.motds;
     });

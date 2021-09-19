@@ -6,21 +6,18 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class FortnitetrackerService {
-  private API_PREV1 = environment.apiUrlV1;
-  private API_PREV2 = environment.apiUrlV2;
+  private API_PREFIX = environment.apiUrl;
   private LENGUAGE = window.localStorage.getItem('language');
 
   constructor(private http: HttpClient) {}
 
-  public getDataV1(endpoint: string) {
-    return this.http.get(
-      this.API_PREV1 + endpoint + '?language=' + this.LENGUAGE
-    );
+  public getData(version: string, endpoint: string) {
+    return this.http.get(this.API_PREFIX + version + endpoint);
   }
 
-  public getDataV2(endpoint: string) {
+  public getDataLang(version: string, endpoint: string) {
     return this.http.get(
-      this.API_PREV2 + endpoint + '?language=' + this.LENGUAGE
+      this.API_PREFIX + version + endpoint + '?language=' + this.LENGUAGE
     );
   }
 

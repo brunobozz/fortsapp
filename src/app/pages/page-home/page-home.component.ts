@@ -18,17 +18,27 @@ export class PageHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getShop();
+    this.getLog();
   }
 
   private getShop() {
-    this.fortnitetracker.getDataV2('shop/br/').subscribe((res: any) => {
-      this.shopDailyTitle = res.data.daily.name;
-      this.shopDaily = res.data.daily.entries;
-      this.shopFeaturedTitle = res.data.featured.name;
-      this.shopFeatured = res.data.featured.entries;
-      this.shopSpecialFeaturedTitle = res.data.specialFeatured.name;
-      this.shopSpecialFeatured = res.data.specialFeatured.entries;
-      console.log(res);
-    });
+    this.fortnitetracker
+      .getDataLang('v2/', 'shop/br/')
+      .subscribe((res: any) => {
+        this.shopDailyTitle = res.data.daily.name;
+        this.shopDaily = res.data.daily.entries;
+        this.shopFeaturedTitle = res.data.featured.name;
+        this.shopFeatured = res.data.featured.entries;
+        this.shopSpecialFeaturedTitle = res.data.specialFeatured.name;
+        this.shopSpecialFeatured = res.data.specialFeatured.entries;
+      });
+  }
+
+  private getLog() {
+    this.fortnitetracker
+      .getData('v2/', 'cosmetics/br/new')
+      .subscribe((res: any) => {
+        console.log(res);
+      });
   }
 }

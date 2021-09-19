@@ -18,11 +18,13 @@ export class PageShopComponent implements OnInit {
   }
 
   private getShop() {
-    this.fortnitetracker.getDataV2('shop/br/').subscribe((res: any) => {
-      this.shopDaily = res.data.daily.entries;
-      this.shopFeatured = res.data.featured.entries;
-      // this.shopSpecialFeatured = res.data.specialFeatured.entries;
-      console.log(this.shopFeatured);
-    });
+    this.fortnitetracker
+      .getDataLang('v2/', 'shop/br/')
+      .subscribe((res: any) => {
+        this.shopDaily = res.data.daily.entries;
+        this.shopFeatured = res.data.featured.entries;
+        // this.shopSpecialFeatured = res.data.specialFeatured.entries;
+        console.log(this.shopFeatured);
+      });
   }
 }

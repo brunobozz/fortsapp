@@ -16,7 +16,7 @@ export class CompMapComponent implements OnInit {
   }
 
   private getMap() {
-    this.fortnitetracker.getDataV1('map/').subscribe((res: any) => {
+    this.fortnitetracker.getDataLang('v1', 'map/').subscribe((res: any) => {
       this.map = res.data;
       console.log(this.map);
     });
