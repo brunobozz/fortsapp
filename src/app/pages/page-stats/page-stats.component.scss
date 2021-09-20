@@ -1,0 +1,63 @@
+.stats {
+  &-infos {
+    &-overall {
+      .list-group {
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .battle-pass {
+    h3 {
+      padding-left: 40px;
+    }
+    &-level {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      margin-left: 15px;
+      i {
+        position: absolute;
+        font-size: 4rem;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      }
+      span {
+        position: absolute;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+    &-level.next {
+      display: none;
+    }
+    .progress {
+      height: 2rem;
+      border-radius: 1rem;
+      background-color: #bbbbbb;
+      box-shadow: inset -3px 3px 5px rgba(0, 0, 0, 0.2);
+      .progress-bar {
+        box-shadow: inset -3px 3px 5px rgba(0, 0, 0, 0.2);
+      }
+      .progress-value {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 1rem;
+        left: 0;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+}

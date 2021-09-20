@@ -1,0 +1,129 @@
+<div class="stats container">
+  <app-comp-page-header pageName="Stats"></app-comp-page-header>
+  <section class="stats-search">
+    <div class="input-group mt-4">
+      <input
+        #username
+        type="text"
+        class="form-control"
+        placeholder="Search by username"
+        aria-describedby="searchUsername"
+      />
+      <button class="btn btn-primary" (click)="searchStats(username.value)">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </section>
+
+  <section *ngIf="userStats.length != 0" class="stats-infos mt-4">
+    <h2>{{ userStats.account.name }}</h2>
+    <span class="small">ID: {{ userStats.account.id }}</span>
+
+    <div class="battle-pass mt-4">
+      <h3>Battle Pass</h3>
+      <div class="battle-pass-level">
+        <i class="fa fa-star text-legendary"></i>
+        <span>{{ userStats.battlePass.level }}</span>
+      </div>
+      <div class="battle-pass-level next">
+        <i class="fa fa-star text-legendary"></i>
+        <span>{{ userStats.battlePass.level + 1 }}</span>
+      </div>
+      <div class="progress">
+        <span class="progress-value">{{ userStats.battlePass.progress }}%</span>
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          role="progressbar"
+          aria-valuenow="94"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [style.width]="userStats.battlePass.progress + '%'"
+        ></div>
+      </div>
+    </div>
+
+    <div class="stats-infos-overall mt-4">
+      <h2>Overall</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span>Deaths</span>
+          <span>{{ userStats.stats.all.overall.deaths }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Kd</span>
+          <span>{{ userStats.stats.all.overall.kd }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Kills</span>
+          <span>{{ userStats.stats.all.overall.kills }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Kills Per Match</span>
+          <span>{{ userStats.stats.all.overall.killsPerMatch }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Kills Per Min</span>
+          <span>{{ userStats.stats.all.overall.killsPerMin }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Last Day Play</span>
+          <span>{{
+            userStats.stats.all.overall.lastModified | date: "dd/MM/yyyy"
+          }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Score Per Min</span>
+          <span>{{ userStats.stats.all.overall.scorePerMin }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Score Per Match</span>
+          <span>{{ userStats.stats.all.overall.scorePerMatch }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Score</span>
+          <span>{{ userStats.stats.all.overall.score }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Players Out lived</span>
+          <span>{{ userStats.stats.all.overall.playersOutlived }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Minutes Played</span>
+          <span>{{ userStats.stats.all.overall.minutesPlayed }}m</span>
+        </li>
+        <li class="list-group-item">
+          <span>Matches</span>
+          <span>{{ userStats.stats.all.overall.matches }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Top 3</span>
+          <span>{{ userStats.stats.all.overall.top3 }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Top 5</span>
+          <span>{{ userStats.stats.all.overall.top5 }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Top 10</span>
+          <span>{{ userStats.stats.all.overall.top10 }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Top 12</span>
+          <span>{{ userStats.stats.all.overall.top12 }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Top 25</span>
+          <span>{{ userStats.stats.all.overall.top25 }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Wins</span>
+          <span>{{ userStats.stats.all.overall.wins }}</span>
+        </li>
+        <li class="list-group-item">
+          <span>Win Rate</span>
+          <span>{{ userStats.stats.all.overall.winRate }}</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

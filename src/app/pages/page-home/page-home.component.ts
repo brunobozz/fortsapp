@@ -18,7 +18,7 @@ export class PageHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getShop();
-    this.getLog();
+    // this.getLog();
   }
 
   private getShop() {
@@ -34,11 +34,11 @@ export class PageHomeComponent implements OnInit {
       });
   }
 
-  private getLog() {
-    this.fortnitetracker
-      .getData('v2/', 'cosmetics/br/new')
-      .subscribe((res: any) => {
-        console.log(res);
-      });
-  }
+  // private getLog() {
+  //   this.fortnitetracker
+  //     .getData('v2/', 'cosmetics/br/new')
+  //     .subscribe((res: any) => {
+  //       console.log(res);
+  //     });
+  // }
 }

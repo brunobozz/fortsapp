@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { PageShopComponent } from './pages/page-shop/page-shop.component';
 import { CompNavbarComponent } from './components/comp-navbar/comp-navbar.component';
 import { CompPageHeaderComponent } from './components/comp-page-header/comp-page-header.component';
-import { PageNewsComponent } from './pages/page-news/page-news.component';
 import { CompNewsBannerComponent } from './components/comp-news-banner/comp-news-banner.component';
 import { CompMapComponent } from './components/comp-map/comp-map.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
@@ -15,6 +14,7 @@ import { CompShopComponent } from './components/comp-shop/comp-shop.component';
 import { CompFooterComponent } from './components/comp-footer/comp-footer.component';
 import { CompPlaylistsComponent } from './components/comp-playlists/comp-playlists.component';
 import { CompMenuComponent } from './components/comp-menu/comp-menu.component';
+import { PageStatsComponent } from './pages/page-stats/page-stats.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,6 @@ import { CompMenuComponent } from './components/comp-menu/comp-menu.component';
     PageShopComponent,
     CompNavbarComponent,
     CompPageHeaderComponent,
-    PageNewsComponent,
     CompNewsBannerComponent,
     CompMapComponent,
     PageHomeComponent,
@@ -30,6 +29,7 @@ import { CompMenuComponent } from './components/comp-menu/comp-menu.component';
     CompFooterComponent,
     CompPlaylistsComponent,
     CompMenuComponent,
+    PageStatsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
