@@ -29,8 +29,10 @@ export class PageHomeComponent implements OnInit {
         this.shopDaily = res.data.daily.entries;
         this.shopFeaturedTitle = res.data.featured.name;
         this.shopFeatured = res.data.featured.entries;
+        
         this.shopSpecialFeaturedTitle = res.data.specialFeatured.name;
         this.shopSpecialFeatured = res.data.specialFeatured.entries;
+        console.log(this.shopSpecialFeatured);
       });
   }
 

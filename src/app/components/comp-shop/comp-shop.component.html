@@ -8,8 +8,13 @@
             class="shop-block-itens-info-img"
             src="https://fortnite-api.com/images/vbuck.png"
           />
-          <span class="shop-block-itens-info-text">
-            {{ line.regularPrice }}</span
+          <span class="shop-block-itens-info-text"
+            ><span
+              *ngIf="line.bundle != null"
+              style="text-decoration: line-through"
+              >{{ line.regularPrice }}</span
+            >
+             {{ line.finalPrice }}</span
           >
         </div>
         <div
