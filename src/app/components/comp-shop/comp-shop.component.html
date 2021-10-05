@@ -1,20 +1,37 @@
-<section class="shop mt-4">
+<section class="shop">
   <h1 class="display-6">{{ title }}</h1>
-  <div class="shop-block">
+  <div
+    class="shop-block"
+    [ngStyle]="{
+      'flex-wrap': wrap
+    }"
+  >
     <div *ngFor="let line of shop" class="shop-block-itens">
       <div class="shop-block-itens-radius">
-        <div class="shop-block-itens-info">
+        <div
+          class="shop-block-itens-info"
+          [ngStyle]="{
+            'border-radius': 'calc(25px * ' + size + ')'
+          }"
+        >
           <img
             class="shop-block-itens-info-img"
             src="https://fortnite-api.com/images/vbuck.png"
+            [ngStyle]="{
+              height: 'calc(24px * ' + size + ')'
+            }"
           />
-          <span class="shop-block-itens-info-text"
+          <span
+            class="shop-block-itens-info-text"
+            [ngStyle]="{
+              'font-size': 'calc(1.4rem * ' + size + ')'
+            }"
             ><span
               *ngIf="line.bundle != null"
               style="text-decoration: line-through"
               >{{ line.regularPrice }}</span
             >
-             {{ line.finalPrice }}</span
+            {{ line.finalPrice }}</span
           >
         </div>
         <div
@@ -22,9 +39,28 @@
           class="shop-block-itens-item"
           [ngClass]="'bg-' + item.rarity.value"
           style="background-image: url('{{ item.images.icon }}');"
+          [ngStyle]="{
+            width: 'calc(200px * ' + size + ')',
+            height: 'calc(200px * ' + size + ')'
+          }"
         >
-          <i class="fa fa-plus shop-block-itens-item-plus"></i>
-          <span class="shop-block-itens-item-text">{{ item.name }}</span>
+          <i
+            class="fa fa-plus shop-block-itens-item-plus"
+            [ngStyle]="{
+              'margin-left': 'calc(200px * ' + size + ')',
+              'margin-bottom':
+                'calc(200px * ' + size + '/ 2 - 35px * ' + size + ')',
+              'font-size': 'calc(60px * ' + size + ')'
+            }"
+          ></i>
+          <span
+            class="shop-block-itens-item-text"
+            [ngStyle]="{
+              'font-size': 'calc(1.3rem * ' + size + ')',
+              'line-height': 'calc(1.5rem * ' + size + ')'
+            }"
+            >{{ item.name }}</span
+          >
         </div>
       </div>
     </div>

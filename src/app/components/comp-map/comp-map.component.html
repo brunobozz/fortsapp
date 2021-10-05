@@ -1,1 +1,5 @@
-<img [src]="map.images.pois" width="100%">
+<section class="comp-map">
+  <div class="comp-map-area">
+    <img *ngIf="map.lenght != 0" [src]="map.images.pois" width="100%" />
+  </div>
+</section>

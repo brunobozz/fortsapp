@@ -13,6 +13,8 @@ export class PageHomeComponent implements OnInit {
   public shopFeatured: any = [];
   public shopSpecialFeaturedTitle: string = '';
   public shopSpecialFeatured: any = [];
+  public shopSize: any = 1;
+  public shopWrap: string = 'nowrap';
 
   constructor(private fortnitetracker: FortnitetrackerService) {}
 
@@ -29,11 +31,20 @@ export class PageHomeComponent implements OnInit {
         this.shopDaily = res.data.daily.entries;
         this.shopFeaturedTitle = res.data.featured.name;
         this.shopFeatured = res.data.featured.entries;
-        
+
         this.shopSpecialFeaturedTitle = res.data.specialFeatured.name;
         this.shopSpecialFeatured = res.data.specialFeatured.entries;
-        console.log(this.shopSpecialFeatured);
       });
+  }
+
+  public changeWrap() {
+    if (this.shopWrap === 'nowrap') {
+      this.shopWrap = 'wrap';
+      this.shopSize = 0.5;
+    } else {
+      this.shopWrap = 'nowrap';
+      this.shopSize = 1;
+    }
   }
 
   // private getLog() {
